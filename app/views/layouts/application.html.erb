@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<ul>
+  <li><%= link_to 'sign in',user_session_path%></li>
+
+<li>  <%=link_to "sign out", destroy_user_session_path, method: :delete %></li>
+  <li><%= link_to 'user Panel',upanel_index_path %></li>
+  <li><%= link_to 'admin Panel',apanel_index_path %></li>
+
+</ul>
+<%= yield %>
+
+</body>
+</html>
